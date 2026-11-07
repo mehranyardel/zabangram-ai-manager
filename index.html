@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ZABANGRAM AI MANAGER</title>
+<style>
+:root{--bg:#101114;--panel:#1a1c21;--line:#2d3038;--text:#f5f5f5;--muted:#a7aab2;--gold:#f4b942;--green:#57c78a}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 80% 0,#282117 0,transparent 34%),var(--bg);color:var(--text);font-family:Tahoma,Arial,sans-serif}
+main{max-width:1050px;margin:auto;padding:26px 18px 60px}.top{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.brand{font-weight:900;letter-spacing:.5px;font-size:21px}.brand span{color:var(--gold)}.sub{color:var(--muted);font-size:13px;margin-top:8px}
+.pill{border:1px solid #5d4823;color:#ffd47b;border-radius:30px;padding:8px 12px;font-size:12px}
+h1{font-size:27px;margin:36px 0 8px}.lead{color:var(--muted);line-height:1.9}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:24px}.card{background:linear-gradient(145deg,#202228,#17191e);border:1px solid var(--line);border-radius:18px;padding:20px}
+h2{font-size:17px;margin:0 0 15px}.tabs{display:flex;gap:9px;margin:16px 0;flex-wrap:wrap}.tab{background:#252830;border:1px solid var(--line);color:#eee;border-radius:10px;padding:9px 13px}
+label{display:block;color:#c8cad0;font-size:13px;margin:12px 0 7px}input,select{width:100%;padding:13px;border-radius:10px;border:1px solid #3a3d46;background:#111318;color:white;font:inherit}
+button{border:0;border-radius:10px;background:var(--gold);color:#17130a;font-weight:bold;padding:12px 18px;margin-top:14px;font:inherit;cursor:pointer}
+button.secondary{background:#30333b;color:#fff;border:1px solid #454954}
+.result{margin-top:15px;background:#111318;border:1px solid var(--line);border-radius:12px;padding:13px;color:#d5d7dc;white-space:pre-wrap;line-height:1.8;font-size:13px;min-height:52px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:18px}.stat{background:#17191e;border:1px solid var(--line);border-radius:12px;padding:14px}.stat b{display:block;color:var(--gold);font-size:18px}.stat small{color:var(--muted)}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:16px}.feature{padding:14px;border:1px solid var(--line);border-radius:12px;color:#d9dbe0;font-size:13px;line-height:1.8}
+.note{font-size:12px;color:var(--muted);line-height:1.9;margin-top:16px}
+@media(max-width:720px){.grid{grid-template-columns:1fr}.features{grid-template-columns:1fr 1fr}.stats{grid-template-columns:1fr 1fr}h1{font-size:22px}}
+</style></head>
+<body><main>
+<div class="top"><div><div class="brand">ZABANGRAM <span>AI MANAGER</span></div><div class="sub">سامانه هوشمند تحلیل محتوای ویدئویی</div></div><div class="pill">نسخه آغازین · فارسی</div></div>
+<h1>مرکز تحلیل ویدئو</h1><div class="lead">ویدئوهای آموزشی آپارات و ریلز اینستاگرام را وارد کن تا مسیر تحلیل محتوا، تدوین و کیفیت آموزشی را مدیریت کنی.</div>
+<div class="stats"><div class="stat"><b>۲ پلتفرم</b><small>آپارات و اینستاگرام</small></div><div class="stat"><b>MP4</b><small>ورودی مستقیم فایل</small></div><div class="stat"><b>RTL</b><small>رابط فارسی و واکنش‌گرا</small></div></div>
+<div class="grid">
+<section class="card"><h2>🔗 تحلیل از طریق لینک</h2>
+<form id="urlForm"><label>پلتفرم</label><select name="platform"><option value="aparat">آپارات</option><option value="instagram">Instagram Reels</option></select>
+<label>لینک ویدئو یا کانال عمومی آپارات</label><input name="url" placeholder="https://www.aparat.com/v/..." required>
+<button type="submit">ثبت لینک برای تحلیل</button></form><div id="urlResult" class="result">وضعیت اتصال: آماده دریافت لینک؛ واکشی خودکار هنوز فعال نشده است.</div></section>
+<section class="card"><h2>🎬 بارگذاری مستقیم ویدئو</h2>
+<form id="fileForm"><label>انتخاب فایل ویدئویی</label><input type="file" name="file" accept="video/mp4,video/quicktime,video/webm" required><button type="submit">بارگذاری و بررسی فایل</button></form><div id="fileResult" class="result">فرمت‌های پیشنهادی: MP4، MOV و WEBM</div></section>
+</div>
+<section class="card" style="margin-top:16px"><h2>گزارش‌هایی که موتور تحلیل تولید خواهد کرد</h2>
+<div class="features"><div class="feature">🎯 تحلیل هوک و شروع ویدئو</div><div class="feature">🗣 استخراج گفتار و متن</div><div class="feature">✂️ بررسی ریتم و تدوین</div><div class="feature">📚 سنجش وضوح آموزش</div><div class="feature">📈 نقاط قوت و ضعف محتوا</div><div class="feature">💡 پیشنهاد عنوان و کپشن</div></div>
+<div class="note">توجه: این نسخه، اسکلت اجرایی اولیه است. دریافت لینک به‌تنهایی به معنی دسترسی به محتوای ویدئو نیست. برای تحلیل واقعی تصویر و صدا باید سرویس پردازش هوش مصنوعی و آداپتورهای مجاز هر پلتفرم پیکربندی شوند. هیچ گزارش نمونه‌ای به‌عنوان تحلیل واقعی نمایش داده نمی‌شود.</div>
+</section>
+</main>
+<script>
+async function send(form, endpoint, box){box.textContent="در حال ارسال...";try{const r=await fetch(endpoint,{method:"POST",body:new FormData(form)});const d=await r.json();box.textContent=JSON.stringify(d,null,2)}catch(e){box.textContent="ارتباط با سرور برقرار نشد: "+e}}
+document.getElementById("urlForm").addEventListener("submit",e=>{e.preventDefault();send(e.target,"/api/analyze-url",document.getElementById("urlResult"))});
+document.getElementById("fileForm").addEventListener("submit",e=>{e.preventDefault();send(e.target,"/api/analyze-upload",document.getElementById("fileResult"))});
+</script></body></html>
